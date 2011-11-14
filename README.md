@@ -2,6 +2,9 @@ Unisonbox
 =========
 Author: Tim Creech
 
+### Disclaimer
+This project is provided as-is, without any express or implied warranty. Although I have used it without incident for a year or so, I cannot be held responsible for any related losses or damages. I would advise the use of automated backups just in case something goes terribly wrong!
+
 Explanation
 -----------
 
@@ -12,6 +15,8 @@ things up to date. I created this for personal use, and thought that it might
 be useful as a starting point for others who want to set up something similar.
 You will probably have to change each file in this repository a bit in order to
 get things up and running.
+
+*All* of the heavy lifting is done by the excellent Unison File Synchronizer from the UPenn. (www.cis.upenn.edu/~bcpierce/unison/)
 
 Installation
 ------------
