@@ -1,5 +1,6 @@
 Unisonbox
 =========
+Author: Tim Creech
 
 Explanation
 -----------
@@ -7,10 +8,10 @@ Explanation
 This is a small collection of simple scripts I use on my personal machines to
 effect Dropbox-like synchronization on my machines. Each machine stores all
 synchronized files locally, and these scripts take care of regularly keeping
-things up to date. You will probably have to change each file in this
-repository a bit in order to get things up and running.
-
-### Author
+things up to date. I created this for personal use, and thought that it might
+be useful as a starting point for others who want to set up something similar.
+You will probably have to change each file in this repository a bit in order to
+get things up and running.
 
 Installation
 ------------
