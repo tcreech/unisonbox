@@ -1,5 +1,8 @@
 #!/bin/sh
 # Author: Tim Creech <tcreech@umd.edu>
+# Copy this script somewhere (like ~/bin/schoolsync) and modify the
+# configuration section below!
+
 
 ### Configuration Variables ###
 HOSTLIST="the.server.com"
@@ -10,6 +13,7 @@ LOCALDIR=/Users/tcreech/box/
 LOCALUSER=`whoami`
 UNISON=/opt/local/bin/unison
 HOSTPICKER=/usr/local/bin/choose-tcp-host
+
 
 ### Implementation ###
 BESTHOST=$($HOSTPICKER $HOSTPORT $HOSTLIST)
