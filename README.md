@@ -16,7 +16,7 @@ be useful as a starting point for others who want to set up something similar.
 You will probably have to change each file in this repository a bit in order to
 get things up and running.
 
-*All* of the heavy lifting is done by the excellent Unison File Synchronizer from the UPenn. (www.cis.upenn.edu/~bcpierce/unison/)
+*All* of the heavy lifting is done by the excellent Unison File Synchronizer from UPenn. (www.cis.upenn.edu/~bcpierce/unison/)
 
 Installation
 ------------
