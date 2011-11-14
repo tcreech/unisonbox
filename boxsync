@@ -1,0 +1,28 @@
+#!/bin/sh
+# Author: Tim Creech <tcreech@umd.edu>
+
+### Configuration Variables ###
+HOSTLIST="the.server.com"
+HOSTPORT=22
+# Make sure to put '/' at the ends of paths where necessary.
+REMOTEDIR=/home/tcreech/box/
+LOCALDIR=/Users/tcreech/box/
+LOCALUSER=`whoami`
+UNISON=/opt/local/bin/unison
+HOSTPICKER=/usr/local/bin/choose-tcp-host
+
+### Implementation ###
+BESTHOST=$($HOSTPICKER $HOSTPORT $HOSTLIST)
+
+if [[ $? -eq 0 ]]; then
+   echo "Best address for remote host found to be \"$BESTHOST\""
+else
+   echo "No responsive address in hostlist found! Aborting sync."
+   exit 0
+fi
+
+# This is for OSX.
+export SSH_AUTH_SOCK=`find /tmp/launch-*/Listeners -user $LOCALUSER -type s | head -1`
+
+# Do the actual sync.
+$UNISON -log -logfile /tmp/$(basename $0).log -silent -batch -prefer ssh://$BESTHOST/$REMOTEDIR $LOCALDIR ssh://$BESTHOST/$REMOTEDIR

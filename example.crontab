@@ -1,0 +1,6 @@
+# Call the sync script for my two directories. On each machine I install this
+# on, I vary the sleep time randomly to try to avoid everyone hitting the
+# server at the same time.
+
+*/3 * * * * sleep 30; /home/tcreech/bin/orgsync 3>&1 1>&2 2>&3 3>&- | grep -v Connected
+*/5 * * * * sleep 17; /home/tcreech/bin/schoolsync 3>&1 1>&2 2>&3 3>&- | grep -v Connected
